@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #071b41;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 38px;
+}
+
+.contenedor > p {
+    text-align: center;
+    color: #f5c400;
+    margin: 10px 0 30px;
+}
+
+.solicitud {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border-left: 7px solid #f5c400;
+}
+
+.solicitud h2 {
+    color: #071b41;
+    margin-bottom: 15px;
+}
+
+.solicitud p {
+    margin: 8px 0;
+    color: #333;
+}
+
+.estado {
+    display: inline-block;
+    background: #f5c400;
+    color: #071b41;
+    padding: 7px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sin-solicitudes {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.volver {
+    display: block;
+    width: 180px;
+    margin: 30px auto;
+    padding: 12px;
+    text-align: center;
+    background: #f5c400;
+    color: #071b41;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}

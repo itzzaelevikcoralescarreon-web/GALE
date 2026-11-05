@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eafff2,
+            #f5fff9
+        );
+
+    color: #1e293b;
+}
+
+
+/* ENCABEZADO */
+
+header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #075b42,
+            #13a36e
+        );
+
+    color: white;
+
+    padding: 25px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.15);
+}
+
+header h1 {
+
+    font-size: 32px;
+}
+
+.volver {
+
+    color: white;
+
+    text-decoration: none;
+
+    background:
+        rgba(255,255,255,0.15);
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.volver:hover {
+
+    background: white;
+
+    color: #075b42;
+}
+
+
+/* CONTENIDO */
+
+main {
+
+    min-height:
+        calc(100vh - 100px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* TARJETA */
+
+.contacto {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.10);
+}
+
+
+/* ICONO */
+
+.icono {
+
+    width: 80px;
+
+    height: 80px;
+
+    background: #e0f9ec;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 40px;
+
+    margin: auto;
+
+    margin-bottom: 20px;
+}
+
+
+/* TITULO */
+
+.contacto h2 {
+
+    color: #075b42;
+
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+.contacto > p {
+
+    color: #64748b;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* CONTACTOS */
+
+.contactos {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 22px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #25d366,
+            #13a34e
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    text-align: left;
+
+    box-shadow:
+        0 8px 20px
+        rgba(20,170,85,0.22);
+
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 13px 28px
+        rgba(20,170,85,0.32);
+}
+
+.whatsapp span {
+
+    font-size: 35px;
+}
+
+.whatsapp b {
+
+    display: block;
+
+    font-size: 18px;
+}
+
+.whatsapp small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    opacity: 0.9;
+}
+
+
+/* BOTÓN INICIO */
+
+.inicio {
+
+    display: block;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border-radius: 11px;
+
+    background: #edf2f7;
+
+    color: #334155;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.inicio:hover {
+
+    background: #dce7e1;
+
+    color: #075b42;
+}
+
+
+/* CELULAR */
+
+@media(max-width: 600px) {
+
+    header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .contacto {
+
+        padding: 30px 22px;
+    }
+
+    .contacto h2 {
+
+        font-size: 25px;
+    }
+
+}

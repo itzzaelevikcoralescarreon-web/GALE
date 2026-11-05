@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar Licencia</title>
+  <link rel="stylesheet" href="solicitud.css">
+  <script src="estudiantes.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <header class="barra-superior"><a class="volver-inicio" href="index.html">← Volver al inicio</a><span>U.E. EL VILLAR</span></header>
+  <main class="contenedor-formulario">
+    <h1>Solicitud de Licencia</h1>
+    <p class="texto-intro">Selecciona tu curso, nombre e ingresa tu contraseña. Se guardará una copia en este dispositivo y podrás abrir WhatsApp del director y del profesor asesor de tu curso para enviarles el aviso.</p>
+    <form id="formularioLicencia">
+      <div class="campo"><label for="curso">Curso y paralelo</label><select id="curso" required><option value="">Selecciona tu curso</option></select></div>
+      <div class="campo"><label for="estudiante">Estudiante</label><select id="estudiante" required disabled><option value="">Primero selecciona el curso</option></select></div>
+      <div class="campo"><label for="claveAlumno">Contraseña personal del estudiante</label><input id="claveAlumno" type="password" required autocomplete="off" placeholder="Ingresa tu contraseña"><small>El nombre se selecciona de la lista oficial; no necesitas escribirlo.</small></div>
+      <div class="campo">
+        <label for="fechaLicencia">Fecha de la licencia</label>
+        <input type="date" id="fechaLicencia" name="fechaLicencia" required>
+        <small>Solo puedes elegir hoy o una fecha dentro de los próximos 7 días.</small>
+      </div>
+      <div class="campo">
+        <label for="motivo">Motivo de la licencia</label>
+        <textarea id="motivo" name="motivo" rows="4" maxlength="1000" required placeholder="Explica brevemente el motivo"></textarea>
+      </div>
+      <div class="campo">
+        <label for="imagen">Adjuntar imagen (opcional)</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*">
+        <small>Se permite una imagen de hasta 2 MB como vista previa. IMPORTANTE: el archivo NO se adjunta automáticamente al mensaje de WhatsApp; envíalo manualmente si es necesario.</small>
+        <div id="vistaPrevia" class="vista-previa" hidden></div>
+      </div>
+      <div class="dato-automatico">Fecha de solicitud: <strong id="fechaRegistro">Se registrará automáticamente</strong></div>
+      <div class="acciones">
+        <button type="submit" class="boton boton-enviar">Enviar solicitud</button>
+        <button type="reset" class="boton boton-limpiar">Limpiar</button>
+        <a href="index.html" class="boton boton-volver">Volver</a>
+      </div>
+      <div id="abrirWhatsApp" class="acciones" hidden></div>
+      <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+</body>
+</html>

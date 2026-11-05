@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Solicitudes</title>
+  <link rel="stylesheet" href="solicitud.css">
+  <script src="estudiantes.js" defer></script><script src="app.js" defer></script>
+<style>.filtros-locales{display:grid;grid-template-columns:1fr 2fr;gap:12px;align-items:center;margin:20px 0;padding:18px;border-radius:12px;background:#f1f5fb}.filtros-locales input,.filtros-locales select{padding:11px;border:1px solid #b9c7d7;border-radius:8px;min-width:0}.solicitud{margin:15px 0}.solicitud .boton{display:inline-block;margin:10px 0}@media(max-width:580px){.filtros-locales{grid-template-columns:1fr}}</style></head>
+<body>
+  <header class="barra-superior"><a class="volver-inicio" href="index.html">← Volver al inicio</a><span>U.E. EL VILLAR</span></header>
+  <main class="contenedor-historial">
+    <h1>Mis Solicitudes</h1>
+    <p class="texto-intro">Solo muestra las solicitudes guardadas en este dispositivo y navegador. No es un historial compartido entre profesores.</p>
+    <section class="filtros-locales" aria-label="Buscar licencias">
+      <label for="filtroNombre">Estudiante</label><input id="filtroNombre" type="text" placeholder="Buscar por nombre">
+      <label for="filtroCurso">Curso</label><select id="filtroCurso"><option value="">Todos</option></select>
+      <label for="filtroDesde">Desde</label><input id="filtroDesde" type="date">
+      <label for="filtroHasta">Hasta</label><input id="filtroHasta" type="date">
+      <button class="boton boton-volver" id="limpiarFiltros" type="button">Limpiar filtros</button>
+    </section>
+    <p id="contador" aria-live="polite"></p>
+    <div id="listaSolicitudes"></div>
+    <div class="acciones acciones-historial">
+      <a href="solicitud.html" class="boton boton-enviar">Nueva solicitud</a>
+      <a href="index.html" class="boton boton-volver">Volver al inicio</a>
+      <button id="exportarCopia" class="boton boton-enviar" type="button">Exportar respaldo JSON</button>
+      <button id="borrarHistorial" class="boton boton-limpiar" type="button">Borrar historial local</button>
+    </div>
+    <p id="mensajeHistorial" class="mensaje" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>

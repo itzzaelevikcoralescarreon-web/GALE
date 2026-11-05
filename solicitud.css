@@ -1,0 +1,36 @@
+*{box-sizing:border-box}
+:root{--azul:#0a2b62;--azul-claro:#2168c5;--fondo:#f2f7fc;--texto:#17243a}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--fondo);color:var(--texto)}
+.encabezado{background:#fff;border-bottom:3px solid #d9e4ef;padding:22px 5%}
+.marca{display:flex;align-items:center;gap:18px;color:var(--azul)}
+.escudo{width:76px;height:88px;border:4px solid var(--azul);border-radius:18px 18px 28px 28px;display:grid;place-items:center;font-weight:bold}
+.marca span{font-size:15px;letter-spacing:1px}.marca h1{font-size:32px;margin:2px 0}.marca p{margin:0;color:#2360a5}
+.inicio{text-align:center;padding:42px 5% 65px}
+.inicio>h2{font-size:48px;color:var(--azul);margin:0 0 8px}.subtitulo{font-size:22px;color:#596579;margin:0}
+.separador{margin:28px auto;color:#2168c5;font-size:28px;max-width:700px;border-bottom:1px solid #cbd7e4;line-height:0.1em}
+.tarjetas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;max-width:1200px;margin:55px auto 0}
+.tarjeta{min-height:250px;padding:25px 18px;border-radius:17px;color:white;text-decoration:none;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 5px 12px #001b4017;transition:transform .2s}
+.tarjeta:hover{transform:translateY(-4px)}.azul{background:#2168c5}.verde{background:#1b9d70}.morado{background:#7548b7}.naranja{background:#f3a000}
+.icono{font-size:48px;font-weight:bold}.tarjeta h3{font-size:23px;margin:18px 0 10px}.tarjeta p{font-size:17px;line-height:1.45;margin:0}
+footer{background:#092b62;color:white;text-align:center;padding:22px}
+.barra-superior{background:var(--azul);color:white;padding:17px 5%;display:flex;justify-content:space-between;align-items:center;font-weight:bold}
+.volver-inicio{color:white;text-decoration:none}.volver-inicio:hover{text-decoration:underline}
+.contenedor-formulario,.contenedor-historial{max-width:760px;margin:35px auto;padding:32px;background:white;border-radius:16px;box-shadow:0 8px 28px #17365d12}
+h1{color:var(--azul);margin-top:0}.texto-intro{color:#5b6678;margin-top:-8px;margin-bottom:26px}
+.campo{margin-bottom:20px}.campo label{display:block;font-weight:bold;margin-bottom:8px}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid #c6d1df;border-radius:8px;font:inherit;background:#fff;color:#17243a}
+input:focus,select:focus,textarea:focus{outline:2px solid #83b8ff;border-color:#2168c5}
+textarea{resize:vertical}small{display:block;color:#68758a;margin-top:6px;line-height:1.4}
+.dato-automatico{background:#eef5ff;border-left:4px solid #2168c5;padding:13px;border-radius:6px;margin:22px 0}
+.acciones{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.boton{border:0;border-radius:8px;padding:12px 18px;font-size:15px;font-weight:bold;cursor:pointer;text-decoration:none;text-align:center;display:inline-block}
+.boton-enviar{background:#1768c5;color:#fff}.boton-limpiar{background:#e9edf3;color:#27364a}.boton-volver{background:#0b2e63;color:#fff}.boton:hover{filter:brightness(.95)}
+.mensaje{font-weight:bold;margin-top:18px}.mensaje.error{color:#b42318}.mensaje.exito{color:#087443}
+.vista-previa img{display:block;max-width:180px;max-height:180px;object-fit:contain;margin-top:10px;border-radius:8px}
+.solicitud{border:1px solid #d8e1ec;border-radius:12px;padding:18px;margin:16px 0;background:#fff}
+.solicitud h2{font-size:19px;color:var(--azul);margin:0 0 12px}.solicitud p{margin:7px 0;overflow-wrap:anywhere}
+.estado{display:inline-block;background:#fff0c2;color:#805800;border-radius:20px;padding:5px 10px;font-size:13px;font-weight:bold}
+.imagen-adjunta{max-width:220px;max-height:220px;display:block;margin-top:10px;border-radius:8px}
+.vacio{padding:25px;text-align:center;background:#f3f6fa;border-radius:10px;color:#5c6879}
+.acciones-historial{margin-top:25px}
+@media(max-width:900px){.tarjetas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.inicio>h2{font-size:36px}.subtitulo{font-size:18px}.tarjetas{grid-template-columns:1fr;max-width:330px}.contenedor-formulario,.contenedor-historial{margin:18px 12px;padding:22px}.barra-superior{gap:12px;font-size:13px}.marca h1{font-size:25px}.acciones .boton{width:100%}}
